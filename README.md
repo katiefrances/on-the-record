@@ -52,7 +52,7 @@ Creating this app makes the user experience better because then users wouldn't h
 
 # ERD
 
-![Image of ERD](app/assets/images/erd.PNG)
+![Image of ERD](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/ERD.png)
 
 # Style Guide
 
@@ -75,3 +75,4 @@ As a user
 - alsdkask
 - asdkasl;dkas
 
+lkjlksdjflksdjflksdjfds
