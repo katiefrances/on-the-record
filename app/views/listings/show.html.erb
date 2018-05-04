@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Album image:</strong>
+  <%= @listing.album_image %>
+</p>
+
+<p>
+  <strong>Artist name:</strong>
+  <%= @listing.artist_name %>
+</p>
+
+<p>
+  <strong>Album name:</strong>
+  <%= @listing.album_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @listing.price %>
+</p>
+
+<p>
+  <strong>Shipping:</strong>
+  <%= @listing.shipping %>
+</p>
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>
