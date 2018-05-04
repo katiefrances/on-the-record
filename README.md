@@ -48,23 +48,21 @@ Creating this app makes the user experience better because then users wouldn't h
 
 # Flowchart
 
-![Image of Flowchart](flowchart.png)
+![Image of Flowchart](app/assets/images/flowchart.png)
 
 # ERD
 
-![Image of ERD](erd.PNG)
+![Image of ERD](app/assets/images/erd.PNG)
 
 # Style Guide
 
 ## Colour Palette
-![Image of Colour Palette](colour-palette.png)
+![Image of Colour Palette](app/assets/colour-palette.png)
 
 ## Fonts
 ### Heading: Alfa Slab One
 ### Main Text: Roboto
 ![Image of Fonts](fonts.png)
-
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Roboto');
 
 Main Text:
 Roboto
