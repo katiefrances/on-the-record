@@ -25,10 +25,11 @@ I believe users would appreciate having a better shopping experience with a clea
 An example of one of these sites would be 
 [Revolve Records](http://www.revolverecords.com.au/), they are a site that sells records online, however their site design & layout are unappealing and inefficient even though the site functionality is good.
 
-There are a few ways that this site could be improved:
-- Design & Interface
-- Moving the search to the top of the page
-- 
+There are a many ways that this site could be improved, a few could be:
+- Changing the general design & Interface
+- Moving the search to the top of the page on the homepage
+- Implementing a simpler, better laid out homepage
+- Better colours, the current colour scheme is awful
 
 
 ## _Why within Australia?_
@@ -45,6 +46,10 @@ To create an application that provides the user with the ability to purchase and
 
 Creating this app makes the user experience better because then users wouldn't have to contact a physical seller to either buy or sell their records which makes the user's experience better overall because they don't have to navigate through a badly laid out site that isn't going to help them easily make a purchase.
 
+## _Provide the user with a better shopping experience_
+
+If the site is well laid out, well categorised & easily searchable, the user is much more likely to make a purchase. If the shopping experience is made easier, the user interface and experience is easier and 
+
 
 # Flowchart
 
@@ -57,17 +62,32 @@ Creating this app makes the user experience better because then users wouldn't h
 # Style Guide
 
 ## Colour Palette
-![Image of Colour Palette](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/colour-palette.png)
+![Image of Colour Palette](https://github.com/katiefrances/on-the-record/raw/master/app/assets/images/colour-palette.png)
 
 
 
-## Fonts
-### Heading: Alfa Slab One
-### Main Text: Roboto
+# Fonts
+
+## Roboto
+
+![Image of Roboto Characters](roboto-1.png)
+
+
+I picked Roboto for the main text because it is an internet standard, easily readable, design adaptable font. It is also the official Google font and is being adapated by more and more sites due to these factors. It scales extremely well and provides a great user experience. 
+
+> "Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types." ⸺ Google Fonts
+
+## Alfa Slab One
+
+![Image of Roboto Characters](alfaslabone-1.png)
+
+For the headings I picked Alfa Slab One because it is also highly readable and is easily distinguishable as a nice bold heading font. I really like the contrast between these two fonts, they compliment each other excellently and are extremely readable and eye pleasing.
+
+> "Alfa Slab One is a contemporary take on the Six-lines Pica Egyptian created by Robert Thorne for the Thorowgood Foundry in 1921. Although initially based on that model, Alfa Slab One was designed with an extreme stem weight, big serifs, more stem contrast and gradual terminals with a single serif. All this attributes give Alfa Slab One a contemporary look with extreme black density." ⸺ Google Fonts
+
+## Font Pairing
+
 ![Image of Fonts](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Fonts.png?raw=true)
-
-Main Text:
-Roboto
 
 # User Stories
 
