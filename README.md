@@ -111,7 +111,7 @@ As a user:
 - After I have become a user, I should then able able to buy & sell records
 
 
-_User should be able to view their profile_
+_User should be able to view their profile_  
 **Feature**: View profile  
 
 As a user:  
@@ -128,7 +128,7 @@ As a logged in user:
 - I should be able to view my profile
 - I should be able 
 
-_User should be able to edit their profile_
+_User should be able to edit their profile_  
 **Feature**: Edit Profile  
 
  As a user:  
