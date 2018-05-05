@@ -52,7 +52,7 @@ Creating this app makes the user experience better because then users wouldn't h
 
 # ERD
 
-![Image of ERD](https://github.com/katiefrances/on-the-record/master/app/assets/images/ERD.png)
+![Image of ERD](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/ERD.png?raw=true)
 
 # Style Guide
 
