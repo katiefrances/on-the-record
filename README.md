@@ -93,16 +93,16 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 
 ## Detailed User Stories
 
-_User should be able to create a profile_
-**Feature**: Create profile
+_User should be able to create a profile_  
+**Feature**: Create profile  
 
-As a user:
+As a user:  
 - I want to be able to create a profile
 - I want to be able to add my details to the profile
 - I want to be able to add an avatar
 - Because I want to be able to add my details to use the site
 
-**Scenario**: User creates profile
+**Scenario**: User creates profile  
 
 - Given I'm not a user yet
 - When I go to the 'sign up' page
@@ -112,9 +112,9 @@ As a user:
 
 
 _User should be able to view their profile_
-**Feature**: View profile
+**Feature**: View profile  
 
-As a user:
+As a user:  
 - I want to log into my profile
 - To add, edit & delete my listings
 - To send & reply to user messages
@@ -123,23 +123,23 @@ As a user:
 
 **Scenario**: User views profile
 
-As a logged in user:
+As a logged in user:  
 - I should be able to log in sucessfully
 - I should be able to view my profile
 - I should be able 
 
 _User should be able to edit their profile_
-**Feature**: Edit Profile
+**Feature**: Edit Profile  
 
- As a user:
+ As a user:  
  - I want to be able to keep my account secure
  - I want to be able to edit & update my details
  - I want to be able to change my password, if necessary
  - Because I want to keep my details up to date
 
-**Scenario**: User wants to edit profile
+**Scenario**: User wants to edit profile  
 
-As a logged in user:
+As a logged in user:  
 - I should be able to view my profile
 - I should be able to edit my details
 - I should be able to change the details
