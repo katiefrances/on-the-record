@@ -70,7 +70,7 @@ If the site is well laid out, well categorised & easily searchable, the user is 
 
 ## Roboto
 
-![Image of Roboto Characters](roboto-1.png)
+![Image of Roboto Characters](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/roboto-1.png?raw=true)
 
 
 I picked Roboto for the main text because it is an internet standard, easily readable, design adaptable font. It is also the official Google font and is being adapated by more and more sites due to these factors. It scales extremely well and provides a great user experience. 
@@ -79,7 +79,7 @@ I picked Roboto for the main text because it is an internet standard, easily rea
 
 ## Alfa Slab One
 
-![Image of Roboto Characters](alfaslabone-1.png)
+![Image of Roboto Characters](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/alfaslabone-1.png?raw=true)
 
 For the headings I picked Alfa Slab One because it is also highly readable and is easily distinguishable as a nice bold heading font. I really like the contrast between these two fonts, they compliment each other excellently and are extremely readable and eye pleasing.
 
