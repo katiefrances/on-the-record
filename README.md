@@ -48,7 +48,11 @@ Creating this app makes the user experience better because then users wouldn't h
 
 ## _Provide the user with a better shopping experience_
 
-If the site is well laid out, well categorised & easily searchable, the user is much more likely to make a purchase. If the shopping experience is made easier, the user interface and experience is easier and 
+If the site is well laid out, well categorised & easily searchable, the user is much more likely to make a purchase. If the shopping experience is made easier, the user is much more likely to sign up for an account and start selling themselves. Having a two-sided marketplace site <i>should</i> make purchasing easier, otherwise it fails at it's primary purpose. Providing this functionality, and providing it well means that the store is more likely to be sucessful.
+
+## _Give users capability to interact with each other_
+
+When you are selling or buying something, you want your users to be able to interact with you so that they can be assured that the product quality is high and that the buyer can make the purchase without worrying about whether or not the sender is legitimate. Having messaging functionality between users increases buyer confidence which thus drives sales.
 
 
 # Flowchart
