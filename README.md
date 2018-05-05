@@ -93,7 +93,7 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 
 ## Detailed User Stories
 
-_User should be able to create a profile_  
+**_User should be able to create a profile_**  
 
 **Feature**: Create profile  
 
@@ -112,7 +112,7 @@ As a user:
 - After I have become a user, I should then able able to buy & sell records
 
 
-_User should be able to view their profile_  
+**_User should be able to view their profile_**  
 
 **Feature**: View profile  
 
@@ -130,7 +130,7 @@ As a logged in user:
 - I should be able to view my profile
 - I should be able 
 
-_User should be able to edit their profile_   
+**_User should be able to edit their profile_**   
 
 **Feature**: Edit Profile  
 
@@ -150,12 +150,12 @@ As a logged in user:
 - Then I should see my profile with the updated details
 
 
-_User should not be able to edit any other user's profile_
+**_User should not be able to edit any other user's profile_**  
 
-_User should not be able to edit a listing that does not belong to them_
+**_User should not be able to edit a listing that does not belong to them_**  
 
-_User should not be able to delete a listing that is not theirs_
+**_User should not be able to delete a listing that is not theirs_**  
 
-_User should not be able to message themself_
+**_User should not be able to message themself_**  
 
-_User should be able to view listings without logging in_
+**_User should be able to view listings without logging in_**  
