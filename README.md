@@ -92,7 +92,7 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 # User Stories
 
 ## Detailed User Stories
-***
+
 
 **_User should be able to create a profile_**  
 
