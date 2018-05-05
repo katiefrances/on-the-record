@@ -94,6 +94,7 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 ## Detailed User Stories
 
 _User should be able to create a profile_  
+
 **Feature**: Create profile  
 
 As a user:  
@@ -112,6 +113,7 @@ As a user:
 
 
 _User should be able to view their profile_  
+
 **Feature**: View profile  
 
 As a user:  
@@ -128,7 +130,8 @@ As a logged in user:
 - I should be able to view my profile
 - I should be able 
 
-_User should be able to edit their profile_  
+_User should be able to edit their profile_   
+
 **Feature**: Edit Profile  
 
  As a user:  
