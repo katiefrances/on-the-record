@@ -64,7 +64,7 @@ Creating this app makes the user experience better because then users wouldn't h
 ## Fonts
 ### Heading: Alfa Slab One
 ### Main Text: Roboto
-![Image of Fonts](fonts.png)
+![Image of Fonts](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Fonts.png?raw=true)
 
 Main Text:
 Roboto
