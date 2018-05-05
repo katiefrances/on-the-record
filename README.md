@@ -29,7 +29,7 @@ There are a many ways that this site could be improved, a few could be:
 - Changing the general design & Interface
 - Moving the search to the top of the page on the homepage
 - Implementing a simpler, better laid out homepage
-- Better colours, the current colour scheme is awful
+- Better colours, the current colour scheme isn't ideal
 
 
 ## _Why within Australia?_
@@ -93,8 +93,66 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 
 ## Detailed User Stories
 
-As a user 
-- alsdkask
-- asdkasl;dkas
+_User should be able to create a profile_
+**Feature**: Create profile
 
-lkjlksdjflksdjflksdjfds
+As a user:
+- I want to be able to create a profile
+- I want to be able to add my details to the profile
+- I want to be able to add an avatar
+- Because I want to be able to add my details to use the site
+
+**Scenario**: User creates profile
+
+- Given I'm not a user yet
+- When I go to the 'sign up' page
+- I should be given the option to add my details & sign up to the site
+- After I've signed up, I should be able to log in with my credentials
+- After I have become a user, I should then able able to buy & sell records
+
+
+_User should be able to view their profile_
+**Feature**: View profile
+
+As a user:
+- I want to log into my profile
+- To add, edit & delete my listings
+- To send & reply to user messages
+- Because I want to be able to sell my records
+- Because I want to be able to buy records
+
+**Scenario**: User views profile
+
+As a logged in user:
+- I should be able to log in sucessfully
+- I should be able to view my profile
+- I should be able 
+
+_User should be able to edit their profile_
+**Feature**: Edit Profile
+
+ As a user:
+ - I want to be able to keep my account secure
+ - I want to be able to edit & update my details
+ - I want to be able to change my password, if necessary
+ - Because I want to keep my details up to date
+
+**Scenario**: User wants to edit profile
+
+As a logged in user:
+- I should be able to view my profile
+- I should be able to edit my details
+- I should be able to change the details
+- I click update profile
+- Then I should see my profile with the updated details
+
+
+_User should not be able to edit any other user's profile_
+
+_User should not be able to edit a listing that does not belong to them_
+
+_User should not be able to delete a listing that is not theirs_
+
+_User should not be able to message themself_
+
+_User should be able to view listings without logging in_
