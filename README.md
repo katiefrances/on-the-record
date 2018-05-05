@@ -54,12 +54,13 @@ If the site is well laid out, well categorised & easily searchable, the user is 
 
 When you are selling or buying something, you want your users to be able to interact with you so that they can be assured that the product quality is high and that the buyer can make the purchase without worrying about whether or not the sender is legitimate. Having messaging functionality between users increases buyer confidence which thus drives sales.
 
+# Site Design
 
-# Flowchart
+## Flowchart
 
 ![Image of Flowchart](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Flowchart.png?raw=true)
 
-# ERD
+## ERD
 
 ![Image of ERD](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/ERD.png?raw=true)
 
