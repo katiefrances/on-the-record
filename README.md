@@ -48,16 +48,18 @@ Creating this app makes the user experience better because then users wouldn't h
 
 # Flowchart
 
-![Image of Flowchart](app/assets/images/flowchart.png)
+![Image of Flowchart](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Flowchart.png?raw=true)
 
 # ERD
 
-![Image of ERD](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/ERD.png)
+![Image of ERD](https://github.com/katiefrances/on-the-record/master/app/assets/images/ERD.png)
 
 # Style Guide
 
 ## Colour Palette
-![Image of Colour Palette](app/assets/colour-palette.png)
+![Image of Colour Palette](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/colour-palette.png)
+
+
 
 ## Fonts
 ### Heading: Alfa Slab One
