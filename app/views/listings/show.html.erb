@@ -2,7 +2,7 @@
 
 <p>
   <strong>Album image:</strong>
-  <%= @listing.album_image %>
+  <%= image_tag(@listings.image.url, alt: 'Image') if @listings.image? %>
 </p>
 
 <p>
