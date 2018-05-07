@@ -1,8 +1,9 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Listings</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Album image</th>
@@ -19,10 +20,11 @@
   <tbody>
     <% @listings.each do |listing| %>
       <tr>      
-        <td><%= image_tag(listing.album_image.url, alt: 'Image') if listing.album_image? %> </td>
+        <td><%= image_tag(listing.album_image.small_thumb.url, alt: 'Image') if listing.album_image? %> </td>
         <td><%= listing.artist_name %></td>
         <td><%= listing.album_name %></td>
-        <td><%= listing.description %></td>
+        <td><%= truncate(listing.description, length: 10) %></td>
+        <td><%= listing.category %></td>
         <td><%= listing.price %></td>
         <td><%= listing.shipping %></td>
         <td><%= link_to 'Show', listing %></td>
@@ -36,3 +38,4 @@
 <br>
 
 <%= link_to 'New Listing', new_listing_path %>
+</div>
