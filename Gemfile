@@ -23,6 +23,8 @@ gem 'jquery-rails'
 
 gem 'carrierwave', '~> 1.0'
 
+gem 'mini_magick'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

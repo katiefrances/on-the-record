@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 
-
 <p>
   <strong>Album image:</strong>
-  <%= image_tag(@listing.album_image.url, alt: 'Image') if @listing.album_image? %>
+  <%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %>
 </p>
 
 <p>
@@ -23,6 +22,11 @@
 </p>
 
 <p>
+  <strong>Category:</strong>
+  <%= @listing.category %>
+</p>
+
+<p>
   <strong>Price:</strong>
   <%= @listing.price %>
 </p>
@@ -33,4 +37,5 @@
 </p>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
+
 <%= link_to 'Back', listings_path %>

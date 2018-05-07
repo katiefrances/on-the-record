@@ -70,6 +70,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:album_image, :artist_name, :album_name, :description, :price, :shipping, :user)
+      params.require(:listing).permit(:album_image, :artist_name, :album_name, :description, :category, :price, :shipping, :user)
     end
 end
