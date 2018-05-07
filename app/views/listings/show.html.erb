@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
   <strong>Album image:</strong>
-  <%= image_tag(@listings.image.url, alt: 'Image') if @listings.image? %>
+  <%= image_tag(@listing.album_image.url, alt: 'Image') if @listing.album_image? %>
 </p>
 
 <p>

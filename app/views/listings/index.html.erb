@@ -17,8 +17,8 @@
 
   <tbody>
     <% @listings.each do |listing| %>
-      <tr>
-        <td><%= listing.album_image %></td>
+      <tr>      
+        <td><%= image_tag(listing.album_image.url, alt: 'Image') if listing.album_image? %> </td>
         <td><%= listing.artist_name %></td>
         <td><%= listing.album_name %></td>
         <td><%= listing.description %></td>
