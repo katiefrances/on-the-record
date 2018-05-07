@@ -25,6 +25,10 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'mini_magick'
 
+gem 'figaro'
+
+gem "fog-aws"
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
