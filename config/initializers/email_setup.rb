@@ -2,7 +2,7 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 587,
-  domain:               'your-app-name.herokuapp.com',
+  domain:               'on-the-record-app.herokuapp.com',
   user_name:            ENV["GMAIL_USERNAME"],
   password:             ENV["GMAIL_PASSWORD"],
   authentication:       'plain',
@@ -16,7 +16,7 @@ if Rails.env.development?
     ActionMailer::Base.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      domain:               'your-app-name.herokuapp.com',
+      domain:               'on-the-record.herokuapp.com',
       user_name:            ENV["GMAIL_USERNAME"],
       password:             ENV["GMAIL_PASSWORD"],
       authentication:       'plain',
