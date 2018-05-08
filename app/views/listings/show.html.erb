@@ -1,10 +1,7 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
-<%= item_price = @listing.price %>
-
 <p>
-  <strong>Album image:</strong>
   <%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %>
 </p>
 
@@ -45,7 +42,7 @@
   data: {
     key: ENV["PUBLISHABLE_KEY"],
     # total price x 100 because it must be in cents
-    amount: item_price*100 ,
+    amount: @listing.price*100 ,
     name: "Buy Now",
     description: @listing.album_name,
     locale: "auto",
