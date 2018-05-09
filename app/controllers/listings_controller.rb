@@ -6,6 +6,7 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     @listings = Listing.all
+    authorize @listings
   end
 
   # GET /listings/1
@@ -16,6 +17,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new
+    authorize @listing
   end
 
   # GET /listings/1/edit
@@ -26,6 +28,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
+    authorize @listing
     @listing.user = current_user
     respond_to do |format|
       if @listing.save
@@ -67,6 +70,7 @@ class ListingsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_listing
       @listing = Listing.find(params[:id])
+      authorize @listing
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

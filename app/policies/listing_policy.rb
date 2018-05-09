@@ -17,7 +17,7 @@ class ListingPolicy < ApplicationPolicy
    
     private
    
-      def article
+      def listing
         record
       end
   end
