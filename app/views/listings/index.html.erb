@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,50 +10,46 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <li class="nav-link">
+          <%= link_to('Sign Up', new_user_registration_path)%>
       </li>
       <li class="nav-item">
-        <a class="nav-link"><%= link_to('Edit profile', edit_user_registration_path) %></a>
+        <li class="nav-link">
+        <%= link_to('Login', new_user_session_path)%>
       </li>
-      <li>  <%= link_to('Sign Up', new_user_registration_path)  %></li>
+      </li>
+
+      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Genres
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Classic Rock</a>
-          <a class="dropdown-item" href="#">Pop</a>
-          <a class="dropdown-item" href="#">Grunge</a>
-          <a class="dropdown-item" href="#">Electronic</a>
+          <a class="dropdown-item"><%= link_to 'Classic Rock', listings_path(q: 'classic-rock') %></a>
+          <%= link_to 'Pop', listings_path(q: 'pop') %>
+          <%= link_to 'Grunge', listings_path(q: 'grunge') %>  
+          <%= link_to 'Electronic', listings_path(q: 'electronic') %>             
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
+     <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item">
+        <li class="nav-link">
+          <%= link_to('Edit profile', edit_user_registration_path) %></li>
+        </li>
+      </li>
+
+      <li class="nav-item">
+        <li class="nav-link">
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
+        </li>
+      </li>
+      </ul>
+
   </div>
 </nav>
 
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <div class="container-fluid">
@@ -94,6 +89,7 @@
       <% end %>
     </tbody>
   </table>
+
 
 
   <br>

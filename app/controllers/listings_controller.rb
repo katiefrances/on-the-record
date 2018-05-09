@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.all # Will we need to use params[:q] to find the listings we want
     authorize @listings
   end
 
