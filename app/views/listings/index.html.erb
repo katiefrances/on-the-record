@@ -81,3 +81,35 @@
 
   <%= link_to 'New Listing', new_listing_path %>
 </div>
+
+
+
+<%# Search functionality %>
+<div class="container">
+  <% @listing.each do |listing| %>
+    <div class="container bg-white border-grey p-4">
+      <div class="col">
+        <div class="row">
+          <div class="col-6">
+            <%= image_taglisting.book_image.url(:medium), class: "book-overview-image" %>
+          </div>
+          <div class="col-6 text-center">
+            <h4 class="font-heading pt-2">
+              <%=listing.title %>
+            </h4>
+            <h6 class="mt-4 font-heading">
+              <%=listing.author %>
+            </h6>
+
+            <%= link_to "View Details",listing, target: "_blank", class: "btn-blue btn font-white mt-5", :method => :get %>
+
+          </div>
+        </div>
+        <div class="row bg-green pt-2 pb-2 mt-4 font-white">
+          <div class="col rrp"><strong>RRP:</strong> $<%=listing.recommended_retail_price %>.00</div>
+          <div class="col your-price"><strong>Your price:</strong> $<%=listing.price %>.00</div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
