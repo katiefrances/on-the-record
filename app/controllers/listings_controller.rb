@@ -29,7 +29,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     respond_to do |format|
       if @listing.save
-        UserNotifierMailer.send_signup_email.deliver
+        UserNotifierMailer.send_signup_email(current_user).deliver
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else
