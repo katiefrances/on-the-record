@@ -4,9 +4,33 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.navbar-brand {
-    font-family: 'Alfa Slab One', cursive;
+a, a:link, a:active {
+    color: #222;
+    /* border-bottom: 2px solid #00D9C0; */
 }
+
+.navbar {
+    background: #222;
+    color: #fff;
+}
+
+.navbar a, a:active {
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: #FF4365
+}
+
+.navbar-brand{
+    font-family: 'Alfa Slab One', cursive;
+    color: #FF4365;
+}
+
+.navbar-brand a, a:active {
+    color: #FF4365;
+}
+
 
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Alfa Slab One', cursive; */

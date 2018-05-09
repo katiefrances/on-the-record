@@ -1,7 +1,6 @@
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">ON THE RECORD</a>
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="/">ON THE RECORD</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,47 +10,44 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <li class="nav-link">
-          <%= link_to('Sign Up', new_user_registration_path)%>
-      </li>
-      <li class="nav-item">
-        <li class="nav-link">
-        <%= link_to('Login', new_user_session_path)%>
-      </li>
-      </li>
-
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Genres
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"><%= link_to 'Classic Rock', listings_path(q: 'classic-rock') %></a>
-          <%= link_to 'Pop', listings_path(q: 'pop') %>
-          <%= link_to 'Grunge', listings_path(q: 'grunge') %>  
-          <%= link_to 'Electronic', listings_path(q: 'electronic') %>             
+          <a class="dropdown-item "<%= link_to 'Classic Rock', listings_path(q: 'classic-rock') %>"</a>
+          <a class="dropdown-item "<%= link_to 'Pop', listings_path(q: 'pop') %>"</a>
+          <a class="dropdown-item "<%= link_to 'Grunge', listings_path(q: 'grunge') %>"</a>
+          <a class="dropdown-item "<%= link_to 'Electronic', listings_path(q: 'electronic') %> "</a>           
         </div>
       </li>
     </ul>
 
      <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item">
-        <li class="nav-link">
-          <%= link_to('Edit profile', edit_user_registration_path) %></li>
-        </li>
-      </li>
 
-      <li class="nav-item">
-        <li class="nav-link">
-          <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
-        </li>
-      </li>
-      </ul>
+    <% if user_signed_in? %>
+      <a class="nav-link" href="<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>"</a>
+      <a class="nav-link" href="<%= edit_user_registration_path %>"> Profile </a> 
+      <a class="nav-link" href="<%= new_listing_path %>"> Create Listing </a>      
+    <% else %>
+      <a class="nav-link" href="<%= new_user_registration_path %>"> Sign Up </a>
+      <a class="nav-link" href="<%= new_user_session_path %>"> Sign In </a>
+      <a class="nav-link" href="<%= new_listing_path %>"> Create Listing </a>
+    <% end %>
+
+    </ul>
+
+<%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+      <div class="row">
+        <%= text_field_tag :search, params[:search], placeholder: "Search Books", class: "form-control col-6 mr-2" %>
+        <%= submit_tag "Search", :name => nil, class: "btn btn-blue font-white col-4" %>
+      </div>
+
+    <% end %>
 
   </div>
 </nav>
-
 
 
 <div class="container-fluid">
