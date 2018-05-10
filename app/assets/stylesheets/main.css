@@ -11,15 +11,21 @@ a, a:link, a:active {
 
 .recently-added {
     font-family: 'Alfa Slab One', cursive;    
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .navbar {
     background: #222;
     color: #fff;
+    padding: 15px;
+    border-bottom: 10px solid #00D9C0;
 }
 
 .navbar a, a:active {
     color: #fff;
+    font-size: 90%;
+    letter-spacing: 1px;
 }
 
 .navbar a:hover {
@@ -51,8 +57,19 @@ a, a:link, a:active {
 .btn {
     border-radius: 0;
     background: #FF4365;
+    font-family: 'Alfa Slab One', cursive;
+    color: #fff;
+
 }
 
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer {
+    background: #222;
+}
 
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Alfa Slab One', cursive; */
