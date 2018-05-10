@@ -2,38 +2,36 @@
 <p id="notice"><%= notice %></p>
   <div class="container">
     <div class="row p-5">
-      <div class="col-md-6 text-center">
+      <div class="col-md-6 p-5">
 
-      <ul class="list-group text-center links-left" width="12rem">
+      <ul class="list-group links-left" width="12rem">
             <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
             <li class="list-group-item artist-name"><%= @listing.artist_name %></li>
             <li class="list-group-item"> <%= @listing.album_name %></li>
             <li class="list-group-item"> <%= @listing.category %></li>
+            <li class="list-group-item">         
+              <% if user_signed_in? %>
+                <%= link_to 'Edit', edit_listing_path(@listing) %> |
+              <% else %>
+                <%= link_to 'Back', listings_path %>
+              <% end %>
+            </li>
           </ul>
-
-        <p>
-        <% if user_signed_in? %>
-          <%= link_to 'Edit', edit_listing_path(@listing) %> |
-        <% else %>
-          <%= link_to 'Back', listings_path, class: "back" %>
-        <% end %>
-        </p>
       </div>
 
-    <div class="col-md-6 text-left">
+    <div class="col-md-6 text-left p-5">
 
-    <p>
-      <strong>Description:</strong>
+    <p class="lead">
       <%= @listing.description %>
     </p>
 
-      <strong>Price:</strong>
-      <%= @listing.price %>
-    </p>
+
+     <p class="artist-name"> $<%= @listing.price %></p>
+  
 
     <p>
-      <strong>Shipping:</strong>
-      <%= @listing.shipping %>
+      <strong>Shipping:</strong><br>
+      $<%= @listing.shipping %>
     </p>
 
     <%= form_tag charges_path do %>
