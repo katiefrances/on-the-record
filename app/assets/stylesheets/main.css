@@ -69,10 +69,17 @@ a:hover {
 .form-page {
     padding: 20px;
     margin-top: 20px;
-    /* max-width: 40%; */
 }
 
 .form-heading {
+    padding: 20px;
+}
+
+.edit-profile {
+    padding: 20px;
+}
+
+.edit-heading {
     padding: 20px;
 }
 
