@@ -11,24 +11,13 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Genres
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item "<%= link_to 'Classic Rock', listings_path(q: 'classic-rock') %>"</a>
-          <a class="dropdown-item "<%= link_to 'Pop', listings_path(q: 'pop') %>"</a>
-          <a class="dropdown-item "<%= link_to 'Grunge', listings_path(q: 'grunge') %>"</a>
-          <a class="dropdown-item "<%= link_to 'Electronic', listings_path(q: 'electronic') %> "</a>           
-        </div>
-      </li>
     </ul>
 
      <ul class="nav navbar-nav navbar-right">
 
     <% if user_signed_in? %>
-      <a class="nav-link" href="<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>"</a>
-      <a class="nav-link" href="<%= edit_user_registration_path %>"> Profile </a> 
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <%=link_to "Profile", edit_user_registration_path , class: "nav-link"%>
       <a class="nav-link" href="<%= new_listing_path %>"> Create Listing </a>      
     <% else %>
       <a class="nav-link" href="<%= new_user_registration_path %>"> Sign Up </a>
@@ -56,39 +45,40 @@
 
   <h1>Listings</h1>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Album image</th>
-        <th>Artist</th>
-        <th>Album</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Shipping</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+<div class="col">
+  <div class="row">
+  
+    <% @listings.each do |listing| %>
 
-    <tbody>
-      <% @listings.each do |listing| %>
-        <tr>      
-          <td><%= image_tag(listing.album_image.small_thumb.url, alt: 'Image') if listing.album_image? %> </td>
-          <td><%= listing.artist_name %></td>
-          <td><%= listing.album_name %></td>
-          <td><%= truncate(listing.description, length: 10) %></td>
-          <td><%= listing.category %></td>
-          <td>$<%= listing.price %></td>
-          <td>$<%= listing.shipping %></td>
-          <td><%= link_to 'Show', listing %></td>
-          <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-          <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">    
+          <div class="card-img-top"><%= image_tag(listing.album_image.thumb.url, alt: 'Image') if listing.album_image?%></div>
+          <div class="card-body">
+            <div class="card-title"><%= listing.artist_name %></div>
+            <div class="card-title"><%= listing.album_name %></div>
+            <div class="card-text">
+              <%= truncate(listing.description, length: 10) %>
+              <%= listing.category %>
+              $<%= listing.price %>
+              $<%= listing.shipping %>
+            </div>
+            <div class="btn btn-primary"><%= link_to 'Show', listing %></div>
+          </div>
+        </div>
+      </div>
+ 
+    <% end %>
+  </div>
+</div>
 
-
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
   <br>
 
