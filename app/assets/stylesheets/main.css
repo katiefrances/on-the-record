@@ -115,3 +115,7 @@ a:hover {
 .btn:hover {
     background: #222;
 }
+
+.back {
+    padding: 10px;
+}

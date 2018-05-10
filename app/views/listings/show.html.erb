@@ -1,57 +1,68 @@
-<div class="container-fluid">
+
   <p id="notice"><%= notice %></p>
+    <div class="container">
+      <div class="row p-5">
+      <div class="col-md-6 text-center">
+          <%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %>
 
-  <p>
-    <%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %>
-  </p>
 
-  <p>
-    <strong>Artist name:</strong>
-    <%= @listing.artist_name %>
-  </p>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Cras justo odio <%= @listing.artist_name %></li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
 
-  <p>
-    <strong>Album name:</strong>
-    <%= @listing.album_name %>
-  </p>
+          <strong>Artist name:</strong>
+          <%= @listing.artist_name %>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @listing.description %>
-  </p>
+          <strong>Album name:</strong>
+          <%= @listing.album_name %>
 
-  <p>
-    <strong>Genre:</strong>
-    <%= @listing.category %>
-  </p>
+          <strong>Genre:</strong>
+          <%= @listing.category %>
 
-  <p>
-    <strong>Price:</strong>
-    <%= @listing.price %>
-  </p>
+        <p>
 
-  <p>
-    <strong>Shipping:</strong>
-    <%= @listing.shipping %>
-  </p>
+        <% if user_signed_in? %>
+          <%= link_to 'Edit', edit_listing_path(@listing) %> |
+        <% else %>
+          <%= link_to 'Back', listings_path, class: "back" %>
+        <% end %>
+      </div>
 
-  <%= form_tag charges_path do %>
-  <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
-  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
-    class: 'stripe-button',
-    data: {
-      key: ENV["PUBLISHABLE_KEY"],
-      # total price x 100 because it must be in cents
-      amount: @listing.price*100 ,
-      name: "Add To Cart",
-      description: @listing.album_name,
-      locale: "auto",
-      currency: "aud"
-    }
-  %>
-  <% end %>
+    <div class="col-md-6">
+    <p>
+      <strong>Description:</strong>
+      <%= @listing.description %>
+    </p>
 
-  <%= link_to 'Edit', edit_listing_path(@listing) %> |
+      <strong>Price:</strong>
+      <%= @listing.price %>
+    </p>
 
-  <%= link_to 'Back', listings_path %>
-</div>
+    <p>
+      <strong>Shipping:</strong>
+      <%= @listing.shipping %>
+    </p>
+
+    <%= form_tag charges_path do %>
+    <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
+    <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+      class: 'stripe-button',
+      data: {
+        key: ENV["PUBLISHABLE_KEY"],
+        # total price x 100 because it must be in cents
+        amount: @listing.price*100 ,
+        name: "Add To Cart",
+        description: @listing.album_name,
+        locale: "auto",
+        currency: "aud"
+      }
+    %>
+    <% end %>
+  
+      </div>
+    </div>
+    </div>
