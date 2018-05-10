@@ -26,7 +26,7 @@ a:hover {
     margin-bottom: 50px;
 }
 
-.navbar {
+.navbar, .navbar-expand-lg, .navbar-dark, .bg-dark{
     background: #222;
     color: #fff;
     padding: 15px;
@@ -52,26 +52,28 @@ a:hover {
     color: #FF4365;
 }
 
-.navbar-toggler {
-    color: white;
-}
-
 .form-group {
-    margin: 50px;
+    /* margin: 50px; */
     border-radius: 0%;  
     border: 0px;
+    /* max-width: 50%; */
 }
 
 .form-control {
    padding: 10px; 
    border-radius: 0px;
    margin-left:10px;
+   max-width: 50%;
 }
 
 .form-page {
     padding: 20px;
     margin-top: 20px;
-    max-width: 40%;
+    /* max-width: 40%; */
+}
+
+.form-heading {
+    padding: 20px;
 }
 
 .actions {
