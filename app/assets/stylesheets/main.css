@@ -9,6 +9,7 @@ a, a:link, a:active {
 }
 
 a:hover {
+    color: #00D9C0;
 
 }
 
@@ -118,4 +119,16 @@ a:hover {
 
 .back {
     padding: 10px;
+    text-align: left;
+}
+
+.artist-name {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 25px;
+    
+}
+
+.links-left {
+    text-align: left;
+    max-width: 290px;
 }

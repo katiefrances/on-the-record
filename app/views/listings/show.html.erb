@@ -4,24 +4,24 @@
     <div class="row p-5">
       <div class="col-md-6 text-center">
 
-      <ul class="list-group list-group-flush" width="15rem">
+      <ul class="list-group text-center links-left" width="12rem">
             <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
-            <li class="list-group-item"><%= @listing.artist_name %></li>
+            <li class="list-group-item artist-name"><%= @listing.artist_name %></li>
             <li class="list-group-item"> <%= @listing.album_name %></li>
             <li class="list-group-item"> <%= @listing.category %></li>
           </ul>
 
-
         <p>
-
         <% if user_signed_in? %>
           <%= link_to 'Edit', edit_listing_path(@listing) %> |
         <% else %>
           <%= link_to 'Back', listings_path, class: "back" %>
         <% end %>
+        </p>
       </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 text-left">
+
     <p>
       <strong>Description:</strong>
       <%= @listing.description %>
@@ -37,21 +37,23 @@
     </p>
 
     <%= form_tag charges_path do %>
-    <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
-    <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
-      class: 'stripe-button',
-      data: {
-        key: ENV["PUBLISHABLE_KEY"],
-        # total price x 100 because it must be in cents
-        amount: @listing.price*100 ,
-        name: "Add To Cart",
-        description: @listing.album_name,
-        locale: "auto",
-        currency: "aud"
-      }
-    %>
+      <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
+      <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+        class: 'stripe-button',
+        data: {
+          key: ENV["PUBLISHABLE_KEY"],
+          # total price x 100 because it must be in cents
+          amount: @listing.price*100 ,
+          name: "Add To Cart",
+          description: @listing.album_name,
+          locale: "auto",
+          currency: "aud",
+          class: "btn"
+        }
+      %>
     <% end %>
   
       </div>
     </div>
     </div>
+
