@@ -1,6 +1,9 @@
-<h1>Editing Listing</h1>
 
-<%= render 'form', listing: @listing %>
+<div class="container-fluid">
+    <h1>Edit Listing</h1>
 
-<%= link_to 'Show', @listings %> |
-<%= link_to 'Back', listings_path %>
+    <%= render 'form', listing: @listing %>
+
+    <%= link_to 'Show', @listings %> |
+    <%= link_to 'Back', listings_path %>
+</div>

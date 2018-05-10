@@ -4,15 +4,52 @@
     <title>On The Record</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag "main.css" %>
+    <%= stylesheet_link_tag "sticky-footer.css" %>
   </head>
 
   <body>
-<ul class="hmenu">
-  <%= render 'devise/menu/registration_items' %>
-  <%= render 'devise/menu/login_items' %>
-</ul>
-<%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222">
+      <a class="navbar-brand" href="/">ON THE RECORD</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+            <% if user_signed_in? %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <%= link_to "Profile", edit_user_registration_path , class: "nav-link"%>
+            <a class="nav-link" href="<%= new_listing_path %>">Add Listing</a>      
+          <% else %>
+            <a class="nav-link" href="<%= new_user_registration_path %>">Sign Up</a>
+            <a class="nav-link" href="<%= new_user_session_path %>">Log In</a>
+            <a class="nav-link" href="<%= new_listing_path %>">Create Listing</a>
+          <% end %>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+            <div class="row p-0">
+              <%= text_field_tag :search, params[:search], placeholder: "", class: "form-control col-6 mr-2" %>
+              <%= submit_tag "Search", :name => nil, class: "btn font-white col-4" %>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+ 
+   <%= yield %>
+
+       <footer class="footer">
+          <div class="container">
+            <span class="text-muted">&copy;&nbsp;Katie Frances 2018</span>
+        </div>
+    </footer>
   </body>
 </html>

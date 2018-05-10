@@ -5,7 +5,16 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.all # Will we need to use params[:q] to find the listings we want
+    authorize @listings
+
+      if params[:search]
+        @listings = Listing.search(params[:search]).order("created_at DESC")
+      else
+        @listings = Listing.all.order("created_at DESC")
+      end
+
+
   end
 
   # GET /listings/1
@@ -16,6 +25,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new
+    authorize @listing
   end
 
   # GET /listings/1/edit
@@ -26,6 +36,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
+    authorize @listing
     @listing.user = current_user
     respond_to do |format|
       if @listing.save
@@ -67,6 +78,7 @@ class ListingsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_listing
       @listing = Listing.find(params[:id])
+      authorize @listing
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

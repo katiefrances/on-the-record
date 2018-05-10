@@ -1,57 +1,57 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %>
-</p>
+  <p>
+    <%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %>
+  </p>
 
-<p>
-  <strong>Artist name:</strong>
-  <%= @listing.artist_name %>
-</p>
+  <p>
+    <strong>Artist name:</strong>
+    <%= @listing.artist_name %>
+  </p>
 
-<p>
-  <strong>Album name:</strong>
-  <%= @listing.album_name %>
-</p>
+  <p>
+    <strong>Album name:</strong>
+    <%= @listing.album_name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @listing.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @listing.description %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @listing.category %>
-</p>
+  <p>
+    <strong>Genre:</strong>
+    <%= @listing.category %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @listing.price %>
+  </p>
 
-<p>
-  <strong>Shipping:</strong>
-  <%= @listing.shipping %>
-</p>
+  <p>
+    <strong>Shipping:</strong>
+    <%= @listing.shipping %>
+  </p>
 
-<%= form_tag charges_path do %>
-<%= hidden_field_tag "listing_id", "#{@listing.id}" %>
-<%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
-  class: 'stripe-button',
-  data: {
-    key: ENV["PUBLISHABLE_KEY"],
-    # total price x 100 because it must be in cents
-    amount: @listing.price*100 ,
-    name: "Buy Now",
-    description: @listing.album_name,
-    locale: "auto",
-    currency: "aud"
-  }
-%>
-<% end %>
+  <%= form_tag charges_path do %>
+  <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
+  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+    class: 'stripe-button',
+    data: {
+      key: ENV["PUBLISHABLE_KEY"],
+      # total price x 100 because it must be in cents
+      amount: @listing.price*100 ,
+      name: "Add To Cart",
+      description: @listing.album_name,
+      locale: "auto",
+      currency: "aud"
+    }
+  %>
+  <% end %>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
+  <%= link_to 'Edit', edit_listing_path(@listing) %> |
 
-<%= link_to 'Back', listings_path %>
+  <%= link_to 'Back', listings_path %>
 </div>

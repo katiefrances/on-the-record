@@ -1,3 +1,4 @@
+<h2 class="form-heading">New Listing</h2>
 
 <%= form_with(model: listing, local: true) do |form| %>
   <% if listing.errors.any? %>
@@ -11,43 +12,48 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="container">
+  <div class="form-group p-3">
+  <div class="field form-group">
     <%= form.label :album_image %>
-    <%= form.file_field :album_image %>
+    <%= form.file_field :album_image, class: "form-control-file" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :artist_name %>
-    <%= form.text_field :artist_name %>
+    <%= form.text_field :artist_name, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :album_name %>
-    <%= form.text_field :album_name %>
+    <%= form.text_field :album_name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :category %>
-    <%= form.text_field :category %>
+    <%= form.text_field :category, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :shipping %>
-    <%= form.number_field :shipping %>
+    <%= form.number_field :shipping, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Add Listing", class: "btn"%>
   </div>
-<% end %>
+  <%= link_to 'Back', listings_path %>
+  <% end %>
+  </div>
+  </div>
+
