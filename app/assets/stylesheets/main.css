@@ -6,7 +6,18 @@ body {
 
 a, a:link, a:active {
     color: #222;
-    /* border-bottom: 2px solid #00D9C0; */
+}
+
+a:hover {
+
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.row {
+    padding-bottom: 50px;
 }
 
 .recently-added {
@@ -32,13 +43,39 @@ a, a:link, a:active {
     color: #FF4365
 }
 
-.navbar-brand{
+.navbar-brand {
     font-family: 'Alfa Slab One', cursive;
     color: #FF4365;
 }
 
 .navbar-brand a, a:active {
     color: #FF4365;
+}
+
+.navbar-toggler {
+    color: white;
+}
+
+.form-group {
+    margin: 50px;
+    border-radius: 0%;  
+    border: 0px;
+}
+
+.form-control {
+   padding: 10px; 
+   border-radius: 0px;
+   margin-left:10px;
+}
+
+.form-page {
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 40%;
+}
+
+.actions {
+    padding: 10px;
 }
 
 .welcome {
@@ -59,7 +96,6 @@ a, a:link, a:active {
     background: #FF4365;
     font-family: 'Alfa Slab One', cursive;
     color: #fff;
-
 }
 
 .btn a {
@@ -67,9 +103,6 @@ a, a:link, a:active {
     text-decoration: none;
 }
 
-.footer {
+.btn:hover {
     background: #222;
 }
-
-/* font-family: 'Roboto', sans-serif;
-font-family: 'Alfa Slab One', cursive; */
