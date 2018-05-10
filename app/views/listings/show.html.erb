@@ -9,9 +9,9 @@
             <li class="list-group-item artist-name"><%= @listing.artist_name %></li>
             <li class="list-group-item"> <%= @listing.album_name %></li>
             <li class="list-group-item"> <%= @listing.category %></li>
-            <li class="list-group-item">         
+            <li class="list-group-item back">         
               <% if user_signed_in? %>
-                <%= link_to 'Edit', edit_listing_path(@listing) %> |
+                <%= link_to 'Edit', edit_listing_path(@listing) %> | <%= link_to 'Back', listings_path %> 
               <% else %>
                 <%= link_to 'Back', listings_path %>
               <% end %>
@@ -25,12 +25,10 @@
       <%= @listing.description %>
     </p>
 
-
      <p class="artist-name"> $<%= @listing.price %></p>
-  
 
     <p>
-      <strong>Shipping:</strong><br>
+      <strong>Shipping:</strong>
       $<%= @listing.shipping %>
     </p>
 

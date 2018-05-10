@@ -118,8 +118,8 @@ a:hover {
 }
 
 .back {
-    padding: 10px;
-    text-align: left;
+    background: #f4f4f4;
+    text-align: center;
 }
 
 .artist-name {
