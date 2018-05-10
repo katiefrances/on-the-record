@@ -4,6 +4,5 @@ class Listing < ApplicationRecord
     
     def self.search(search)
         where("artist_name ILIKE ? OR album_name ILIKE ? OR category ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
-      end
-
+    end
 end

@@ -10,78 +10,59 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      
+        <% if user_signed_in? %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <%=link_to "Profile", edit_user_registration_path , class: "nav-link"%>
+        <a class="nav-link" href="<%= new_listing_path %>">Create Listing</a>      
+      <% else %>
+        <a class="nav-link" href="<%= new_user_registration_path %>">Sign Up</a>
+        <a class="nav-link" href="<%= new_user_session_path %>">Sign In</a>
+        <a class="nav-link" href="<%= new_listing_path %>">Create Listing</a>
+      <% end %>
     </ul>
 
      <ul class="nav navbar-nav navbar-right">
-
-    <% if user_signed_in? %>
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-      <%=link_to "Profile", edit_user_registration_path , class: "nav-link"%>
-      <a class="nav-link" href="<%= new_listing_path %>"> Create Listing </a>      
-    <% else %>
-      <a class="nav-link" href="<%= new_user_registration_path %>"> Sign Up </a>
-      <a class="nav-link" href="<%= new_user_session_path %>"> Sign In </a>
-      <a class="nav-link" href="<%= new_listing_path %>"> Create Listing </a>
-    <% end %>
-
+      <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+        <div class="row">
+          <%= text_field_tag :search, params[:search], placeholder: "", class: "form-control col-6 mr-2" %>
+          <%= submit_tag "Search", :name => nil, class: "btn btn-blue font-white col-4" %>
+        </div>
+      <% end %>
     </ul>
-
-<%= form_tag(listings_path, :method => "get", id: "search-form") do %>
-      <div class="row">
-        <%= text_field_tag :search, params[:search], placeholder: "Search Books", class: "form-control col-6 mr-2" %>
-        <%= submit_tag "Search", :name => nil, class: "btn btn-blue font-white col-4" %>
-      </div>
-
-    <% end %>
-
   </div>
 </nav>
 
-
 <div class="container-fluid">
+  <div class="welcome">
+    <p class-"lead">
+      Welcome to On The Record, your pre-loved vinyl specialists!</p>
+    </div>
 
-  <p id="notice"><%= notice %></p>
-
-  <h1>Listings</h1>
-
-<div class="col">
-  <div class="row">
-  
-    <% @listings.each do |listing| %>
-
-      <div class="col-4">
-        <div class="card" style="width: 18rem;">    
-          <div class="card-img-top"><%= image_tag(listing.album_image.thumb.url, alt: 'Image') if listing.album_image?%></div>
-          <div class="card-body">
-            <div class="card-title"><%= listing.artist_name %></div>
-            <div class="card-title"><%= listing.album_name %></div>
-            <div class="card-text">
-              <%= truncate(listing.description, length: 10) %>
-              <%= listing.category %>
-              $<%= listing.price %>
-              $<%= listing.shipping %>
-            </div>
-            <div class="btn btn-primary"><%= link_to 'Show', listing %></div>
+    <p id="notice"><%= notice %></p>
+      <h1 class="recently-added">Recently Added</h1>
+        <div class="col">
+          <div class="row">
+            <% @listings.each do |listing| %>
+              <div class="col-3">
+                <div class="card" style="width: 18rem;">    
+                  <div class="card-img-top"><%= image_tag(listing.album_image.thumb.url, alt: 'Image') if listing.album_image?%></div>
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <h4><li class="list-group-item"><%= listing.artist_name %></li></h4>
+                      <h5><li class="list-group-item"><%= listing.album_name %></li></h5>
+                        <div class="card-text">
+                        <li class="list-group-item"><%= truncate(listing.description, length: 10) %></li>
+                        <li class="list-group-item"><%= listing.category %></li>
+                        <li class="list-group-item">$<%= listing.price %></li>
+                        <li class="list-group-item">$<%= listing.shipping %></li>
+                      </div>
+                      <div class="btn"><%= link_to 'Show', listing %></div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           </div>
         </div>
-      </div>
- 
-    <% end %>
   </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-  <br>
-
-  <%= link_to 'New Listing', new_listing_path %>
-</div>
 

@@ -8,11 +8,11 @@ class ListingsController < ApplicationController
     @listings = Listing.all # Will we need to use params[:q] to find the listings we want
     authorize @listings
 
-    if params[:search]
-    @listings = Listing.search(params[:search]).order("created_at DESC")
-  else
-    @listings = Listing.all.order("created_at DESC")
-  end
+      if params[:search]
+        @listings = Listing.search(params[:search]).order("created_at DESC")
+      else
+        @listings = Listing.all.order("created_at DESC")
+      end
 
 
   end

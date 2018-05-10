@@ -4,18 +4,12 @@
     <title>On The Record</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag "main.css" %>
   </head>
 
   <body>
-<%# <ul class="hmenu"> %>
-  <%# <%= render 'devise/menu/registration_items' %>
-  <%# <%= render 'devise/menu/login_items' %>
-<%# </ul> %>
-  <div class="container-fluid">
-    <%= yield %>
-  </div>
+      <%= yield %>
   </body>
 </html>

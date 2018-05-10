@@ -9,6 +9,10 @@ a, a:link, a:active {
     /* border-bottom: 2px solid #00D9C0; */
 }
 
+.recently-added {
+    font-family: 'Alfa Slab One', cursive;    
+}
+
 .navbar {
     background: #222;
     color: #fff;
@@ -29,6 +33,24 @@ a, a:link, a:active {
 
 .navbar-brand a, a:active {
     color: #FF4365;
+}
+
+.welcome {
+    font-family: 'Alfa Slab One', cursive;
+    background: #e9e9e9;
+    padding: 30px;
+    text-align: center;
+}
+
+.card-img-top {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.btn {
+    border-radius: 0;
+    background: #FF4365;
 }
 
 
