@@ -1,27 +1,16 @@
 
-  <p id="notice"><%= notice %></p>
-    <div class="container">
-      <div class="row p-5">
+<p id="notice"><%= notice %></p>
+  <div class="container">
+    <div class="row p-5">
       <div class="col-md-6 text-center">
-          <%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %>
 
+      <ul class="list-group list-group-flush" width="15rem">
+            <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
+            <li class="list-group-item"><%= @listing.artist_name %></li>
+            <li class="list-group-item"> <%= @listing.album_name %></li>
+            <li class="list-group-item"> <%= @listing.category %></li>
+          </ul>
 
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">Cras justo odio <%= @listing.artist_name %></li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-
-          <strong>Artist name:</strong>
-          <%= @listing.artist_name %>
-
-          <strong>Album name:</strong>
-          <%= @listing.album_name %>
-
-          <strong>Genre:</strong>
-          <%= @listing.category %>
 
         <p>
 

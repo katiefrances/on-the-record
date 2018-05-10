@@ -1,1 +1,11 @@
-<h2>Thanks, you paid <strong>$<%= @listing.price %></strong>!</h2>
+<div class="container-fluid">
+    <h2>Payment successful!</h2>
+        <p>Order Details:</p>
+            <ul class="list-group list-group-flush" width="15rem">
+                <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
+                <li class="list-group-item"><%= @listing.artist_name %></li>
+                <li class="list-group-item"> <%= @listing.album_name %></li>
+                <li class="list-group-item"> $<%= @listing.price %> </li>
+                <li class="list-group-item"> $<%= @shipping.price %> </li>
+          </ul>
+</div>
