@@ -10,7 +10,12 @@ a, a:link, a:active {
 
 a:hover {
     color: #00D9C0;
+    text-decoration: none;
 
+}
+
+.lead {
+    font-size: 18px;
 }
 
 .container-fluid {
@@ -117,6 +122,8 @@ a:hover {
     background: #222;
 }
 
+/*  SHOW PAGE */
+
 .back {
     background: #f4f4f4;
     text-align: center;
@@ -125,10 +132,15 @@ a:hover {
 .artist-name {
     font-family: 'Alfa Slab One', cursive;
     font-size: 25px;
-    
 }
 
+/* list group on left col on show page */
 .links-left {
     text-align: left;
     max-width: 290px;
+}
+
+/* description right col on show page */
+.desc-col {
+    border-right: 1px solid #f4f4f4;
 }

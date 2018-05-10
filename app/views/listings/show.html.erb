@@ -2,54 +2,42 @@
 <p id="notice"><%= notice %></p>
   <div class="container">
     <div class="row p-5">
-      <div class="col-md-6 p-5">
+      <div class="col-md-6 p-5 desc-col">
+        <ul class="list-group links-left" width="12rem">
+              <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
+              <li class="list-group-item artist-name"><%= @listing.artist_name %></li>
+              <li class="list-group-item"> <%= @listing.album_name %></li>
+              <li class="list-group-item"> <%= @listing.category %></li>
+              <li class="list-group-item back">         
+                <% if user_signed_in? %>
+                  <%= link_to 'Edit', edit_listing_path(@listing) %> | <%= link_to 'Back', listings_path %> 
+                <% else %>
+                  <%= link_to 'Back', listings_path %>
+                <% end %>
+              </li>
+            </ul>
+      </div>
 
-      <ul class="list-group links-left" width="12rem">
-            <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image'), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
-            <li class="list-group-item artist-name"><%= @listing.artist_name %></li>
-            <li class="list-group-item"> <%= @listing.album_name %></li>
-            <li class="list-group-item"> <%= @listing.category %></li>
-            <li class="list-group-item back">         
-              <% if user_signed_in? %>
-                <%= link_to 'Edit', edit_listing_path(@listing) %> | <%= link_to 'Back', listings_path %> 
-              <% else %>
-                <%= link_to 'Back', listings_path %>
+      <div class="col-md-6 text-left p-5">
+        <p class="lead"><%= @listing.description %></p>
+          <p class="artist-name"> $<%= @listing.price %></p>
+            <p><strong>Shipping:</strong> $<%= @listing.shipping %></p>
+            <%= form_tag charges_path do %>
+              <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
+              <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+                class: 'stripe-button',
+                data: {
+                  key: ENV["PUBLISHABLE_KEY"],
+                  # total price x 100 because it must be in cents
+                  amount: @listing.price*100 ,
+                  name: "Add To Cart",
+                  description: @listing.album_name,
+                    locale: "auto",
+                    currency: "aud"
+                  }
+                %>
               <% end %>
-            </li>
-          </ul>
+        </div>
       </div>
-
-    <div class="col-md-6 text-left p-5">
-
-    <p class="lead">
-      <%= @listing.description %>
-    </p>
-
-     <p class="artist-name"> $<%= @listing.price %></p>
-
-    <p>
-      <strong>Shipping:</strong>
-      $<%= @listing.shipping %>
-    </p>
-
-    <%= form_tag charges_path do %>
-      <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
-      <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
-        class: 'stripe-button',
-        data: {
-          key: ENV["PUBLISHABLE_KEY"],
-          # total price x 100 because it must be in cents
-          amount: @listing.price*100 ,
-          name: "Add To Cart",
-          description: @listing.album_name,
-          locale: "auto",
-          currency: "aud",
-          class: "btn"
-        }
-      %>
-    <% end %>
-  
-      </div>
-    </div>
     </div>
 
