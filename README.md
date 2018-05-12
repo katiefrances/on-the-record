@@ -59,6 +59,10 @@ If the site is well laid out, well categorised & easily searchable, the user is 
 
 When you are selling or buying something, you want your users to be able to interact with you so that they can be assured that the product quality is high and that the buyer can make the purchase without worrying about whether or not the sender is legitimate. Having messaging functionality between users increases buyer confidence which thus drives sales.
 
+## _Implement Email Confirmation Functionality_
+
+I have set up Sendgrid to send the user an email when they create a new listing.
+
 # Site Design
 
 ## Flowchart
@@ -69,12 +73,15 @@ When you are selling or buying something, you want your users to be able to inte
 
 ![Image of ERD](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/ERD.png)
 
+
+
 # Style Guide
 
 ## Colour Palette
 ![Image of Colour Palette](https://github.com/katiefrances/on-the-record/raw/master/app/assets/images/colour-palette.png)
 
-
+# Figma Wireframes
+![Image of Figma Wireframe](wireframe-1.png) ![Image of Figma Wireframe](wireframe-2.png) ![Image of Figma Wireframe](wireframe-3.png)![Image of Figma Wireframe](wireframe-4.png)
 
 # Fonts
 
@@ -184,6 +191,15 @@ As a logged in user:
 <br>
 
 **_User should not be able to edit a listing that does not belong to them_**  
+
+As a user:
+- I should be able to view a listing
+- I should not be able to edit a listing that is not mine
+- I should be able to view the profile without being able to edit it
+
+As a logged in user:
+- I should be able to view a listing
+- I should n
 
 <br>
 
