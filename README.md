@@ -92,13 +92,12 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 
 ## Font Pairing
 
-![User Story 1](user-stories-1.png) ![User Story 2](user-stories-2.png) ![User Story 3](user-stories-2.png)
-
+![Image of Fonts](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Fonts.png?raw=true)
 
 # User Stories
 
-![Image of Fonts](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Fonts.png?raw=true)
-
+![User Story](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/user-stories-1.png) ![User Story](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/user-stories-2.png?raw=true)
+[User Story](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/user-stories-3.png?raw=true)
 
 ## Detailed User Stories
 
