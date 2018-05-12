@@ -106,12 +106,13 @@ a:hover {
     padding-top: 20px;
 }
 
+
 .card-text {
     font-size: 13px;
 }
 
 .card-group {
-    display: flex
+    display: flex;
 }
 
 .btn {

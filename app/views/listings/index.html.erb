@@ -14,8 +14,8 @@
                   <div class="card-img-top"><%= image_tag(listing.album_image.thumb.url, alt: 'Image') if listing.album_image?%></div>
                   <div class="card-body">
                     <ul class="list-group list-group-flush">
-                      <h5><li class="list-group-item"><%= listing.artist_name %></li></h5>
-                      <small class="text-muted"><li class="list-group-item"><%= listing.album_name %></li></small>
+                      <h5><li class="list-group-item artist-name"><%= listing.artist_name %></li></h5>
+                        <li class="list-group-item"><%= listing.album_name %></li>
                         <div class="card-text">
                         <li class="list-group-item"><%= listing.category %></li>
                         <li class="list-group-item">$<%= listing.price %></li>
