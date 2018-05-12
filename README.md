@@ -81,7 +81,7 @@ I have set up Sendgrid to send the user an email when they create a new listing.
 ![Image of Colour Palette](https://github.com/katiefrances/on-the-record/raw/master/app/assets/images/colour-palette.png)
 
 # Figma Wireframes
-![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-1.png) ![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-2.png) ![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-3.png)![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-4.png) ![Image of Figma Wireframe]()
+![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-1.png) ![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-2.png) ![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-3.png)![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-4.png) ![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-5.png)
 
 # Fonts
 
@@ -175,6 +175,7 @@ As a logged in user:
 <br>
 
 **_User should not be able to edit any other user's profile_**  
+
 **Feature**: Edit Profile Security
 
  As a user:  
@@ -192,22 +193,36 @@ As a logged in user:
 
 **_User should not be able to edit a listing that does not belong to them_**  
 
+**Feature**: Listing Security
+
 As a user:
 - I should be able to view a listing
 - I should not be able to edit a listing that is not mine
-- I should be able to view the profile without being able to edit it
+- I should get an error if I try to do this
+
+**Scenario**: User wants to edit other another user's listing  
 
 As a logged in user:
 - I should be able to view a listing
-- I should n
-
-<br>
-
-**_User should not be able to delete a listing that is not theirs_**  
+- I should not be able to edit someone else's listing
 
 <br>
 
 **_User should be able to view listings without logging in_**  
+
+**Feature**:
+
+As a logged out/unregistered user:
+
+- I should be able to view all listings
+- I should be able to view the listings
+- I should be prompted to create an account if I want to purchase the listing
+
+**Scenario**: User wants to view a listing without creating an account
+
+- The user should be able to see all the listings
+- The user should be able to click on the view button and see the listing
+
 
 # Future Ideas & Implementation
 
