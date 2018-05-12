@@ -97,7 +97,7 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 # User Stories
 
 ![User Story](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/user-stories-1.png) ![User Story](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/user-stories-2.png?raw=true)
-[User Story](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/user-stories-3.png?raw=true)
+![User Story](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/user-stories-3.png)
 
 ## Detailed User Stories
 
