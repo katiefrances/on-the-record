@@ -81,7 +81,7 @@ I have set up Sendgrid to send the user an email when they create a new listing.
 ![Image of Colour Palette](https://github.com/katiefrances/on-the-record/raw/master/app/assets/images/colour-palette.png)
 
 # Figma Wireframes
-![Image of Figma Wireframe](wireframe-1.png) ![Image of Figma Wireframe](wireframe-2.png) ![Image of Figma Wireframe](wireframe-3.png)![Image of Figma Wireframe](wireframe-4.png)
+![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-1.png) ![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-2.png) ![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-3.png)![Image of Figma Wireframe](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/wireframe-4.png) ![Image of Figma Wireframe]()
 
 # Fonts
 
