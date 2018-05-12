@@ -4,8 +4,12 @@ One The Record is a two-sided marketplace application written in Ruby on Rails t
 
 >“Vinyl is the real deal. I've always felt like, until you buy the vinyl record, you don't really own the album. And it's not just me or a little pet thing or some kind of retro romantic thing from the past. It is still alive.” ⸺ Jack White
 
-[Project Management Board](https://trello.com/b/RuCG8sv9/rails-2-sided-marketplace-assessment) &nbsp;+&nbsp;
-[User Stories Board](https://trello.com/b/IjckaJd3/user-stories-board)
+## [Deployed Site](http://on-the-record-app.herokuapp.com) &nbsp;+&nbsp; [GitHub Repo](https://github.com/katiefrances/on-the-record)
+
+[Project Management Board](https://trello.com/b/RuCG8sv9/rails-2-sided-marketplace-assessment) &nbsp;|&nbsp;
+[User Stories Board](https://trello.com/b/IjckaJd3/user-stories-board) &nbsp;|&nbsp;
+[Figma Wireframes](https://www.figma.com/file/dGsaNIfl35lPUPug5VIbWN01/On-The-Record)
+
 
 # The Problem
 
@@ -59,11 +63,11 @@ When you are selling or buying something, you want your users to be able to inte
 
 ## Flowchart
 
-![Image of Flowchart](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Flowchart.png?raw=true)
+![Image of Flowchart](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/Flowchart.png)
 
 ## ERD
 
-![Image of ERD](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/ERD.png?raw=true)
+![Image of ERD](https://raw.githubusercontent.com/katiefrances/on-the-record/master/app/assets/images/ERD.png)
 
 # Style Guide
 
@@ -164,8 +168,18 @@ As a logged in user:
 <br>
 
 **_User should not be able to edit any other user's profile_**  
+**Feature**: Edit Profile Security
 
-**_User should
+ As a user:  
+- I should not be able to view other user's profiles
+- I should not be able to edit other user's details
+
+**Scenario**: User wants to edit other user's profile  
+
+As a logged in user:  
+- I should not be able to view other user's profiles
+- I should not be able to edit other user's details
+
 
 <br>
 
@@ -178,3 +192,12 @@ As a logged in user:
 <br>
 
 **_User should be able to view listings without logging in_**  
+
+# Future Ideas & Implementation
+
+- I would like to implement a messaging system between buyers & sellers in the future, however I ran out of time for this project to be able to do so.
+
+- I would like to have more options for the buyers & sellers to rate each other
+
+- I would like more options for listing management. More notices when listings are yours and not yours when you try to edit or delete them.
+

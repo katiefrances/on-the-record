@@ -5,7 +5,7 @@ body {
 }
 
 a, a:link, a:active {
-    color: #222;
+    color: #FF4365;
 }
 
 a:hover {
@@ -104,6 +104,10 @@ a:hover {
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
+}
+
+.card-text {
+    font-size: 13px;
 }
 
 .btn {

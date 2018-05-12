@@ -9,9 +9,11 @@
               <li class="list-group-item"> <%= @listing.album_name %></li>
               <li class="list-group-item"> <%= @listing.category %></li>
               <li class="list-group-item back">         
-                <% if user_signed_in? %>
-                  <%= link_to 'Edit', edit_listing_path(@listing) %> | <%= link_to 'Delete', listings_path(@listing), method: :delete, data: { confirm: 'Are you sure?' } %> |
-                  <%= link_to 'Back', listings_path %>
+                <% if user_signed_in? && @user = current_user %>
+                  <%= link_to 'Edit', edit_listing_path(@listing) %> | 
+                  <%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <% else %>
+                    <%= link_to "Back", :back %>
                 <% end %>
               </li>
             </ul>
@@ -21,21 +23,31 @@
         <p class="lead"><%= @listing.description %></p>
           <p class="artist-name"> $<%= @listing.price %></p>
             <p><strong>Shipping:</strong> $<%= @listing.shipping %></p>
-            <%= form_tag charges_path do %>
-              <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
-              <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
-                class: 'stripe-button',
-                data: {
-                  key: ENV["PUBLISHABLE_KEY"],
-                  # total price x 100 because it must be in cents
-                  amount: @listing.price*100 ,
-                  name: "Add To Cart",
-                  description: @listing.album_name,
-                    locale: "auto",
-                    currency: "aud"
-                  }
-                %>
-              <% end %>
+
+
+                <%= form_tag charges_path do %>
+                <% if user_signed_in? %>
+                  <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
+                  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+                    class: 'stripe-button',
+                    data: {
+                      key: ENV["PUBLISHABLE_KEY"],
+                      # total price x 100 because it must be in cents
+                      amount: @listing.price*100 ,
+                      name: "Add To Cart",
+                      description: @listing.album_name,
+                        locale: "auto",
+                        currency: "aud"
+                      }
+                      
+                    %> 
+                    <%else%>
+                     <p>Please <%= link_to "Sign up", new_user_registration_path%> or <%= link_to "Sign in", new_user_session_path%> to purchase this item.</p>
+
+                    <%end%>
+
+        <% end %>
+
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
         <div class="col">
           <div class="row">
             <% @listings.each do |listing| %>
-              <div class="col-3">
+              <div class="col-3 col-md-3 col-sm-6 col-xs-6">
                 <div class="card" style="width: 18rem;">    
                   <div class="card-img-top"><%= image_tag(listing.album_image.thumb.url, alt: 'Image') if listing.album_image?%></div>
                   <div class="card-body">
@@ -21,7 +21,7 @@
                         <li class="list-group-item">$<%= listing.price %></li>
                         <li class="list-group-item">$<%= listing.shipping %></li>
                       </div>
-                      <btn class="btn search-button"><%= link_to 'Add To Cart', listing %></btn>
+                      <btn class="btn search-button"><%= link_to 'View', listing %></btn>
                       
                     </ul>
                   </div>
