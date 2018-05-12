@@ -10,8 +10,7 @@
               <li class="list-group-item"> <%= @listing.category %></li>
               <li class="list-group-item back">         
                 <% if user_signed_in? %>
-                  <%= link_to 'Edit', edit_listing_path(@listing) %> | <%= link_to 'Back', listings_path %> 
-                <% else %>
+                  <%= link_to 'Edit', edit_listing_path(@listing) %> | <%= link_to 'Delete', listings_path(@listing), method: :delete, data: { confirm: 'Are you sure?' } %> |
                   <%= link_to 'Back', listings_path %>
                 <% end %>
               </li>

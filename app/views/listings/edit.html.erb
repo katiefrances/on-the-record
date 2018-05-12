@@ -6,4 +6,8 @@
 
     <%= link_to 'Show', @listings %> |
     <%= link_to 'Back', listings_path %>
+    <%= link_to 'Delete', 
+             article_path(article), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %> 
 </div>

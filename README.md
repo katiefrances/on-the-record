@@ -92,9 +92,13 @@ For the headings I picked Alfa Slab One because it is also highly readable and i
 
 ## Font Pairing
 
-![Image of Fonts](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Fonts.png?raw=true)
+![User Story 1](user-stories-1.png) ![User Story 2](user-stories-2.png) ![User Story 3](user-stories-2.png)
+
 
 # User Stories
+
+![Image of Fonts](https://github.com/katiefrances/on-the-record/blob/master/app/assets/images/Fonts.png?raw=true)
+
 
 ## Detailed User Stories
 
@@ -168,10 +172,6 @@ As a logged in user:
 <br>
 
 **_User should not be able to delete a listing that is not theirs_**  
-
-<br>
-
-**_User should not be able to message themself_**  
 
 <br>
 
