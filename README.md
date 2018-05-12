@@ -4,7 +4,8 @@ One The Record is a two-sided marketplace application written in Ruby on Rails t
 
 >“Vinyl is the real deal. I've always felt like, until you buy the vinyl record, you don't really own the album. And it's not just me or a little pet thing or some kind of retro romantic thing from the past. It is still alive.” ⸺ Jack White
 
-
+[Project Management Board](https://trello.com/b/RuCG8sv9/rails-2-sided-marketplace-assessment) &nbsp;+&nbsp;
+[User Stories Board](https://trello.com/b/IjckaJd3/user-stories-board)
 
 # The Problem
 
@@ -163,6 +164,8 @@ As a logged in user:
 <br>
 
 **_User should not be able to edit any other user's profile_**  
+
+**_User should
 
 <br>
 
