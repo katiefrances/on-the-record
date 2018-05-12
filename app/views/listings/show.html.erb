@@ -1,54 +1,50 @@
 
 <p id="notice"><%= notice %></p>
   <div class="container">
-    <div class="row p-5">
-      <div class="col-md-6 p-5 desc-col">
-        <ul class="list-group links-left" width="12rem">
-              <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image', class: "img-fluid"), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
-              <li class="list-group-item artist-name"><%= @listing.artist_name %></li>
+    <div class="row p-4">
+      <div class="col-6 desc-col">
+        <ul class="list-group links-left width:15rem;">
+          <li class="list-group-item"><%= link_to(image_tag(@listing.album_image.thumb.url, alt: 'Image', class: "img-fluid"), @listing.album_image.url, target: '_blank') if @listing.album_image? %></li>
+            <li class="list-group-item artist-name"><%= @listing.artist_name %></li>
               <li class="list-group-item"> <%= @listing.album_name %></li>
-              <li class="list-group-item"> <%= @listing.category %></li>
-              <li class="list-group-item back">         
-                <% if user_signed_in? && @user = current_user %>
-                  <%= link_to 'Edit', edit_listing_path(@listing) %> | 
-                  <%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Are you sure?' } %> | 
-                  <%= link_to 'Back', listings_path %>
-
-                  <% else %>
-                   <%= link_to 'Back', listings_path %>
-                <% end %>
+                <li class="list-group-item"> <%= @listing.category %></li>
+                  <li class="list-group-item back">         
+                    <% if user_signed_in? && @user = current_user %>
+                        <%= link_to 'Edit', edit_listing_path(@listing) %> | 
+                        <%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Are you sure?' } %> | 
+                        <%= link_to 'Back', listings_path %>
+                      <% else %>
+                        <%= link_to 'Back', listings_path %>
+                  <% end %>
               </li>
-            </ul>
-            
+          </ul>
       </div>
 
       <div class="col-md-6 text-left p-1">
         <p class="lead"><%= @listing.description %></p>
           <p class="artist-name"> $<%= @listing.price %></p>
             <p><strong>Shipping:</strong> $<%= @listing.shipping %></p>
-
-            <%-# If user is signed in, show them the buy button, if not ask them to log in -%>
+              <%-# If user is signed in, show them the buy button, if not ask them to log in -%>
                 <%= form_tag charges_path do %>
-                <% if user_signed_in? %>
-                  <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
-                  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
-                    class: 'stripe-button',
-                    data: {
-                      key: ENV["PUBLISHABLE_KEY"],
-                      # total price x 100 because it must be in cents
-                      amount: @listing.price*100 ,
-                      name: "Add To Cart",
-                      description: @listing.album_name,
-                        locale: "auto",
-                        currency: "aud"
-                      }
-                    %> 
+                  <% if user_signed_in? %>
+                    <%= hidden_field_tag "listing_id", "#{@listing.id}" %>
+                    <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+                      class: 'stripe-button',
+                      data: {
+                        key: ENV["PUBLISHABLE_KEY"],
+                        # total price x 100 because it must be in cents
+                        amount: @listing.price*100 ,
+                        name: "Add To Cart",
+                        description: @listing.album_name,
+                          locale: "auto",
+                          currency: "aud"
+                        }
+                      %> 
                     <%else%>
                      <p>Please <%= link_to "Sign up", new_user_registration_path%> or <%= link_to "Sign in", new_user_session_path%> to purchase this item.</p>
                     <%= link_to 'Back', listings_path %>
               <%end%>
-        <% end %>
-
+          <% end %>
         </div>
       </div>
     </div>
