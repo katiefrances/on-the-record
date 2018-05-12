@@ -110,6 +110,10 @@ a:hover {
     font-size: 13px;
 }
 
+.card-group {
+    display: flex
+}
+
 .btn {
     border-radius: 0;
     background: #FF4365;
